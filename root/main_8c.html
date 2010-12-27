@@ -1,0 +1,257 @@
+<!-- This comment will put IE 6, 7 and 8 in quirks mode -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Referencia del Archivo main.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Generado por Doxygen 1.6.1 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="annotated.html"><span>Estructuras&nbsp;de&nbsp;Datos</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <img id="MSearchSelect" src="search/search.png"
+             onmouseover="return searchBox.OnSearchSelectShow()"
+             onmouseout="return searchBox.OnSearchSelectHide()"
+             alt=""/>
+        <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+             onfocus="searchBox.OnSearchFieldFocus(true)" 
+             onblur="searchBox.OnSearchFieldFocus(false)" 
+             onkeyup="searchBox.OnSearchFieldChange(event)"/>
+        <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia del Archivo main.c</h1>
+<p>Aquí está el centro del sistema.  
+<a href="#_details">Más...</a></p>
+<code>#include &quot;<a class="el" href="declaraciones_8h_source.html">declaraciones.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="ISR_8c_source.html">ISR.c</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="eeprom_8c_source.html">eeprom.c</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="init_8c_source.html">init.c</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="itoa_8c_source.html">itoa.c</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="display_8c_source.html">display.c</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="menu_8c_source.html">menu.c</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="pid_8c_source.html">pid.c</a>&quot;</code><br/>
+<div class="dynheader">
+Dependencia gráfica adjunta para main.c:</div>
+<div class="dynsection">
+<div class="center"><img src="main_8c__incl.png" border="0" usemap="#main_8c_map" alt=""/></div>
+<map name="main_8c_map" id="main_8c">
+<area shape="rect" href="declaraciones_8h.html" title="Definiciones, declaraciones y variables globales." alt="" coords="111,160,223,189"/><area shape="rect" href="ISR_8c.html" title="Servicios de interrupciones." alt="" coords="177,83,231,112"/><area shape="rect" href="eeprom_8c.html" title="Rutinas de almacenamiento permanente de datos." alt="" coords="333,160,408,189"/><area shape="rect" href="init_8c.html" title="Rutinas de inicialización." alt="" coords="332,83,380,112"/><area shape="rect" href="itoa_8c.html" title="Funciones de conversión de numeros enteros a strings." alt="" coords="255,83,308,112"/><area shape="rect" href="display_8c.html" title="Routines for controlling a hd44780&#45;compatible lcd display." alt="" coords="432,160,504,189"/><area shape="rect" href="menu_8c.html" title="Menú de configuración a mostrar en el lcd." alt="" coords="17,83,81,112"/><area shape="rect" href="pid_8c.html" title="Proportional Integrative Derivative loop." alt="" coords="105,83,153,112"/></map>
+</div>
+
+<p><a href="main_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Funciones</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a02b8c19cb76adf0d99ef0212b6bf6eca">temp_ctrl</a> (float temperatura)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Toma medidas contra excesos de temperatura e invoca al pid.  <a href="#a02b8c19cb76adf0d99ef0212b6bf6eca"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667">main</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Inicializa el sistema y ejecuta el lazo principal.  <a href="#a6288eba0f8e8ad3ab1544ad731eb7667"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripción detallada</h2>
+<p>Aquí está el centro del sistema. </p>
+<p>Este archivo contiene las funciones de mas alto nivel -control de temperatura y el lazo principal-</p>
+<p>El sistema, a grandes razgos, realiza lo siguiente:</p>
+<p>Con el timer 2 vigila si el boton PROG fue pulsado durante un seg, en caso afirmativo habilita el modo programacion (en <a class="el" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="Inicializa el sistema y ejecuta el lazo principal.">main()</a> ), y muestrea el estado de los botones, manejando los PaP.</p>
+<p>Además, muestrea continuamente la temperatura, tension y corriente en el ISR del SPI,el dato es depositado en ad_temp_atomic, ad_volt_atomic y ad_amp_atomic.</p>
+<p><a class="el" href="main_8c.html#a6288eba0f8e8ad3ab1544ad731eb7667" title="Inicializa el sistema y ejecuta el lazo principal.">main()</a> calcula y muestra tensiones y corrientes.</p>
+<p>EL modulo 1 del PCA genera el pwm en forma continua para controlar la velocidad del motor. </p>
+
+<p>Definición en el archivo <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<hr/><h2>Documentación de las funciones</h2>
+<a class="anchor" id="a6288eba0f8e8ad3ab1544ad731eb7667"></a><!-- doxytag: member="main.c::main" ref="a6288eba0f8e8ad3ab1544ad731eb7667" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void main </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Inicializa el sistema y ejecuta el lazo principal. </p>
+<p>La inicialización consiste en configurar los módulos integrados en el microcontrolador, entre ellos timers, pwm, y comunicaciones. De esta forma, se disparan todos los mecanismos para que el sistema siga funcionando a partir de las interrupciones generadas por el entorno. Una vez inicializado, se escribe en el display y empieza el lazo principal, que se limita a controlar la temperatura y escribir la tensión y corriente en el display. </p>
+
+<p>Definición en la línea <a class="el" href="main_8c_source.html#l00101">101</a> del archivo <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+<p><div class="fragment"><pre class="fragment"><a name="l00102"></a>00102 {
+<a name="l00103"></a>00103     <a class="code" href="init_8c.html#a348d23d5899ce59d18975284dfb0afc0" title="Inicializa las variables del sistema (pid, pines, configuracion).">init_system</a>();      <span class="comment">//inicializo puertos y variables, leo config de la eeprom</span>
+<a name="l00104"></a>00104     
+<a name="l00105"></a>00105     <a class="code" href="display_8c.html#a6842775ba83d166f02b8fef8bb63b1e6" title="Initialize diplay.">lcd_init</a>();
+<a name="l00106"></a>00106     <a class="code" href="init_8c.html#a99ccbea44caa7d91c17782c602f956ef" title="Configuración del timer 0.">timer0_init</a>();
+<a name="l00107"></a>00107     <a class="code" href="init_8c.html#a0eb48b6146b62e0e20d87fe066fe9f30" title="Configuración del timer 2.">timer2_init</a>();
+<a name="l00108"></a>00108     <a class="code" href="init_8c.html#a4bf94e7ecb9e79da24374ce9f0a9838f" title="Configuración del PWM.">PWM_init</a>(255);
+<a name="l00109"></a>00109 
+<a name="l00110"></a>00110     <a class="code" href="display_8c.html#ad235a86241458b1e7b8771688bfdaf9a" title="Clear display.">lcd_clear</a>();
+<a name="l00111"></a>00111     <a class="code" href="display_8c.html#a59fe0123d1b4a54205e69fc673f5f14a" title="Move cursor.">lcd_set_xy_raw</a>(0,0);
+<a name="l00112"></a>00112     <a class="code" href="display_8c.html#ae6d85b9d85a99760ac6a199444754a23" title="Print a string.">lcd_putstring</a>(<span class="stringliteral">&quot;FUENTE DIG. 2&quot;</span>);
+<a name="l00113"></a>00113     <a class="code" href="display_8c.html#a59fe0123d1b4a54205e69fc673f5f14a" title="Move cursor.">lcd_set_xy_raw</a>(0,1);
+<a name="l00114"></a>00114     <a class="code" href="display_8c.html#ae6d85b9d85a99760ac6a199444754a23" title="Print a string.">lcd_putstring</a>(<span class="stringliteral">&quot;V:&quot;</span>);
+<a name="l00115"></a>00115     <a class="code" href="display_8c.html#a59fe0123d1b4a54205e69fc673f5f14a" title="Move cursor.">lcd_set_xy_raw</a>(8,1);
+<a name="l00116"></a>00116     <a class="code" href="display_8c.html#ae6d85b9d85a99760ac6a199444754a23" title="Print a string.">lcd_putstring</a>(<span class="stringliteral">&quot;I:&quot;</span>);
+<a name="l00117"></a>00117 
+<a name="l00118"></a>00118     
+<a name="l00119"></a>00119     <a class="code" href="init_8c.html#ae909944aa85ae98323073c628be541aa" title="Configuración del módulo SPI.">spi_init</a>();
+<a name="l00120"></a>00120     SPDAT = 0x20;   <span class="comment">//arranco a transmitir</span>
+<a name="l00121"></a>00121 
+<a name="l00122"></a>00122 <span class="comment">/*  while(1)</span>
+<a name="l00123"></a>00123 <span class="comment">    {</span>
+<a name="l00124"></a>00124 <span class="comment">        mover_paso_a_paso_horario(1);</span>
+<a name="l00125"></a>00125 <span class="comment">    }</span>
+<a name="l00126"></a>00126 <span class="comment">*/</span>
+<a name="l00127"></a>00127     <span class="keywordflow">while</span>(1)
+<a name="l00128"></a>00128     {
+<a name="l00129"></a>00129         <span class="comment">/*lcd_set_xy_raw(0,0);</span>
+<a name="l00130"></a>00130 <span class="comment">        lcd_putstring(&quot;FUENTE DIG. 2&quot;);</span>
+<a name="l00131"></a>00131 <span class="comment">        lcd_set_xy_raw(0,1);</span>
+<a name="l00132"></a>00132 <span class="comment">        lcd_putstring(&quot;V:&quot;);</span>
+<a name="l00133"></a>00133 <span class="comment">        lcd_set_xy_raw(8,1);</span>
+<a name="l00134"></a>00134 <span class="comment">        lcd_putstring(&quot;I:&quot;);*/</span>
+<a name="l00135"></a>00135 
+<a name="l00136"></a>00136         <span class="comment">//un moving average de las conversiones suaviza _mucho_ las variables (pero ojo con la ganancia del derivative)</span>
+<a name="l00137"></a>00137         ON_OFF_317 = 0;
+<a name="l00138"></a>00138         <span class="comment">//temp = n*Vref/2^12bits / 10mV°C *ganancia</span>
+<a name="l00139"></a>00139         temperature = ((float)ad_volt_atomic) * 5 / 4096 * 100;
+<a name="l00140"></a>00140         <a class="code" href="display_8c.html#a59fe0123d1b4a54205e69fc673f5f14a" title="Move cursor.">lcd_set_xy_raw</a>(3,1);
+<a name="l00141"></a>00141         
+<a name="l00142"></a>00142         <a class="code" href="display_8c.html#ae37f1da1bcd6bf29202b39ff19723a34" title="Print an integer.">display_int</a>((<span class="keywordtype">int</span>)(temperature*10));
+<a name="l00143"></a>00143         <span class="comment">//lcd_putstring(itoa( ((int)(temperature*10)), string, 10 ));  //ojo con caracteres grandes y viejos</span>
+<a name="l00144"></a>00144         <span class="comment">//lcd_putstring(&quot; &quot;);  //por si el anterior print tenia una cifra mas</span>
+<a name="l00145"></a>00145         
+<a name="l00146"></a>00146         temperature = ((float)ad_amp_atomic) * 5 / 4096 * 100;
+<a name="l00147"></a>00147         <a class="code" href="display_8c.html#a59fe0123d1b4a54205e69fc673f5f14a" title="Move cursor.">lcd_set_xy_raw</a>(3+8,1);
+<a name="l00148"></a>00148 
+<a name="l00149"></a>00149         <a class="code" href="display_8c.html#ae37f1da1bcd6bf29202b39ff19723a34" title="Print an integer.">display_int</a>((<span class="keywordtype">int</span>)(temperature*10));
+<a name="l00150"></a>00150         
+<a name="l00151"></a>00151         
+<a name="l00152"></a>00152 <span class="comment">//      lcd_putstring(itoa( ((int)(temperature*10)), string, 10 ));  //ojo con caracteres grandes y viejos</span>
+<a name="l00153"></a>00153 <span class="comment">//      lcd_putstring(&quot; &quot;);  //por si el anterior print tenia una cifra mas</span>
+<a name="l00154"></a>00154 
+<a name="l00155"></a>00155         <span class="keywordflow">if</span>(PID_SAMPLE)      <span class="comment">//cada 1 cte de tiempo = 0.1sec</span>
+<a name="l00156"></a>00156         {
+<a name="l00157"></a>00157             temperature = ((float)<a class="code" href="declaraciones_8h.html#aee185c8cbf77c53802a0654ccf802671" title="muestras de las variables analógicas">ad_temp_atomic</a>) * 5 / 4096 * 100;    <span class="comment">//en °C</span>
+<a name="l00158"></a>00158             <a class="code" href="main_8c.html#a02b8c19cb76adf0d99ef0212b6bf6eca" title="Toma medidas contra excesos de temperatura e invoca al pid.">temp_ctrl</a>(temperature);
+<a name="l00159"></a>00159             PID_SAMPLE = 0;
+<a name="l00160"></a>00160         }
+<a name="l00161"></a>00161         
+<a name="l00162"></a>00162         <span class="keywordflow">if</span>(MODO_PROG)
+<a name="l00163"></a>00163             <a class="code" href="menu_8c.html#ab6e62388d67de5f692cbb3ede77f5caf" title="Núcleo del menú.">modo_prog</a>();
+<a name="l00164"></a>00164     }   
+<a name="l00165"></a>00165 }
+</pre></div></p>
+
+</div>
+</div>
+<a class="anchor" id="a02b8c19cb76adf0d99ef0212b6bf6eca"></a><!-- doxytag: member="main.c::temp_ctrl" ref="a02b8c19cb76adf0d99ef0212b6bf6eca" args="(float temperatura)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void temp_ctrl </td>
+          <td>(</td>
+          <td class="paramtype">float&nbsp;</td>
+          <td class="paramname"> <em>temperatura</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Toma medidas contra excesos de temperatura e invoca al pid. </p>
+<p>Si la temperatura actual supera el máximo establecido -extraído de la eeprom-, se encienden las alarmas, y se apaga la fuente. Con una simple histéresis, la fuente se enciende cuando se han alcanzado valores seguros de temperatura (90% del máximo).</p>
+<p>Una vez chequeada la temperatura, se procede al cálculo de la velocidad del cooler con el lazo pid </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>temperatura</em>&nbsp;</td><td>Temperatura actual </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="main_8c_source.html#l00057">57</a> del archivo <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+<p><div class="fragment"><pre class="fragment"><a name="l00058"></a>00058 {
+<a name="l00059"></a>00059     <span class="keywordtype">float</span> output;
+<a name="l00060"></a>00060     <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> dutyCycle = 0;
+<a name="l00061"></a>00061     <span class="keywordflow">if</span>(temperatura &gt;= <a class="code" href="declaraciones_8h.html#ad01aef708ae4ea5cde86c73f03f92a01" title="temperatura a la que se activan las alarmas">max_temp</a>)     <span class="comment">//alarma! todo mal</span>
+<a name="l00062"></a>00062     {
+<a name="l00063"></a>00063         LED_2 = 0;
+<a name="l00064"></a>00064         BUZZER = 1;
+<a name="l00065"></a>00065         ON_OFF_317 = 0;     <span class="comment">// apago la fuente</span>
+<a name="l00066"></a>00066         CCAP1H = 0;     <span class="comment">// cooler al 100%</span>
+<a name="l00067"></a>00067     }
+<a name="l00068"></a>00068     <span class="keywordflow">else</span>
+<a name="l00069"></a>00069     {
+<a name="l00070"></a>00070           
+<a name="l00071"></a>00071         <span class="keywordflow">if</span>( (temperatura &lt; ((<span class="keywordtype">float</span>)<a class="code" href="declaraciones_8h.html#ad01aef708ae4ea5cde86c73f03f92a01" title="temperatura a la que se activan las alarmas">max_temp</a>*0.9) )&amp;&amp; ON_OFF_317 == 0)
+<a name="l00072"></a>00072         {
+<a name="l00073"></a>00073             LED_2 = 1;
+<a name="l00074"></a>00074             BUZZER = 0;
+<a name="l00075"></a>00075             ON_OFF_317 = 1;     <span class="comment">//enciendo la fuente</span>
+<a name="l00076"></a>00076         }
+<a name="l00077"></a>00077         
+<a name="l00078"></a>00078         <span class="comment">/* debug: chequear valores extremos que etrega la funcion, invertir y adaptar a los 8bits del pwm</span>
+<a name="l00079"></a>00079 <span class="comment">        cutoff a %menor al de arranque */</span>
+<a name="l00080"></a>00080         
+<a name="l00081"></a>00081         output = updatePID(pid, 35 - temperatura, temperatura);     <span class="comment">//35°C es el target</span>
+<a name="l00082"></a>00082         
+<a name="l00083"></a>00083         <span class="comment">/*relacionar output con CCAP1H */</span>
+<a name="l00084"></a>00084         dutyCycle = (<span class="keywordtype">unsigned</span> char)output;  <span class="comment">//output es menor que 255</span>
+<a name="l00085"></a>00085         <span class="comment">/*if(dutyCycle &gt; 115)</span>
+<a name="l00086"></a>00086 <span class="comment">          CCAP1H = 255 - dutyCycle;</span>
+<a name="l00087"></a>00087 <span class="comment">        else</span>
+<a name="l00088"></a>00088 <span class="comment">          CCAP1H = 255;*/</span>
+<a name="l00089"></a>00089     }
+<a name="l00090"></a>00090 }
+</pre></div></p>
+
+</div>
+</div>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Estructuras de Datos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variables</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr size="1"/><address style="text-align: right;"><small>Generado el Tue Dec 1 10:47:58 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>Proyecto Final</title>
+<title>Campos de datos - Variables</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javaScript" src="search/search.js"></script>
@@ -17,8 +17,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 <div class="navigation" id="top">
   <div class="tabs">
     <ul>
-      <li class="current"><a href="index.html"><span>Página&nbsp;principal</span></a></li>
-      <li><a href="annotated.html"><span>Estructuras&nbsp;de&nbsp;Datos</span></a></li>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Estructuras&nbsp;de&nbsp;Datos</span></a></li>
       <li><a href="files.html"><span>Archivos</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -35,15 +35,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
       </li>
     </ul>
   </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Estructura&nbsp;de&nbsp;datos</span></a></li>
+      <li class="current"><a href="functions.html"><span>Campos&nbsp;de&nbsp;datos</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="functions.html"><span>Todo</span></a></li>
+      <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+    </ul>
+  </div>
 </div>
 <div class="contents">
-<h1>Proyecto Final</h1><dl class="author"><dt><b>Autores:</b></dt><dd>Bonzani Andrés <br/>
- Chaparro Marcos</dd></dl>
-<h2><a class="anchor" id="intro_sec">
-Introducción</a></h2>
-<p>Esta es la documentación correspondiente al firmware de control de una fuente de alimentación regulable controlada a través de un microcontrolador. El sistema cuenta con microcontrolador modelo at89c51ed2, encargado de leer pedidos del usuario, mostrar todas las variables y configuraciones de la fuente en un display LCD, y generar alarmas ante cortocircuitos y excesos de temperatura.</p>
-<p>El proyecto hace uso de un conversor A/D de 12bits y 8 canales, LCD, motor PaP, comunicaciones RS232 para el bootloader, un motor de corriente continua para el ventilador, y la memoria eeprom para almacenar configuraciones.</p>
-<p>Las rutinas utilizadas se encargan de manejar todos estos dispositivos, y de administrar los recursos para llevar a cabo el control. También se incluyen rutinas de manejo de strings, de matemática, y la presentación de datos en el menu. Entre todo, se utilizó un 12% de la memoria Flash disponible, y la ram interna fue suficiente para las variables y el stack. </p>
+&nbsp;<ul>
+<li>dGain
+: <a class="el" href="structSPid.html#aaa65522cc2bcd311ac987b6cc44bbbff">SPid</a>
+</li>
+<li>dState
+: <a class="el" href="structSPid.html#aeea37a2f240e3626a1ada677ff441a6d">SPid</a>
+</li>
+<li>iGain
+: <a class="el" href="structSPid.html#a5a37129e747b1c8135ceadc043df704f">SPid</a>
+</li>
+<li>iMax
+: <a class="el" href="structSPid.html#a2db5c42b3cd88c26ca78a1e8fb44e4d6">SPid</a>
+</li>
+<li>iState
+: <a class="el" href="structSPid.html#adda89fff2cd8678c7b81ffc15c670d22">SPid</a>
+</li>
+<li>pGain
+: <a class="el" href="structSPid.html#a440e5b60f4b2d4d63ed790785206c58c">SPid</a>
+</li>
+</ul>
 </div>
 <!--- window showing the filter options -->
 <div id="MSearchSelectWindow"

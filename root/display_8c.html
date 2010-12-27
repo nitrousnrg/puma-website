@@ -1,0 +1,480 @@
+<!-- This comment will put IE 6, 7 and 8 in quirks mode -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Referencia del Archivo display.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Generado por Doxygen 1.6.1 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="annotated.html"><span>Estructuras&nbsp;de&nbsp;Datos</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <img id="MSearchSelect" src="search/search.png"
+             onmouseover="return searchBox.OnSearchSelectShow()"
+             onmouseout="return searchBox.OnSearchSelectHide()"
+             alt=""/>
+        <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+             onfocus="searchBox.OnSearchFieldFocus(true)" 
+             onblur="searchBox.OnSearchFieldFocus(false)" 
+             onkeyup="searchBox.OnSearchFieldChange(event)"/>
+        <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Referencia del Archivo display.c</h1>
+<p>Routines for controlling a hd44780-compatible lcd display.  
+<a href="#_details">Más...</a></p>
+<code>#include &lt;at89c51ed2.h&gt;</code><br/>
+<div class="dynheader">
+Dependencia gráfica adjunta para display.c:</div>
+<div class="dynsection">
+<div class="center"><img src="display_8c__incl.png" border="0" usemap="#display_8c_map" alt=""/></div>
+</div>
+<div class="dynheader">
+Gráfico de los archivos que directa o indirectamente incluyen a este archivo:</div>
+<div class="dynsection">
+<div class="center"><img src="display_8c__dep__incl.png" border="0" usemap="#display_8cdep_map" alt=""/></div>
+<map name="display_8cdep_map" id="display_8cdep">
+<area shape="rect" href="main_8c.html" title="Aquí está el centro del sistema." alt="" coords="12,83,71,112"/></map>
+</div>
+
+<p><a href="display_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Definiciones</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4781e073871c6f27f89b9463ad3a4ed1"></a><!-- doxytag: member="display.c::LCD_RS" ref="a4781e073871c6f27f89b9463ad3a4ed1" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><b>LCD_RS</b>&nbsp;&nbsp;&nbsp;P0_5</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a26089a10ddd59a0dc7283c19ccc02533"></a><!-- doxytag: member="display.c::LCD_RW" ref="a26089a10ddd59a0dc7283c19ccc02533" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><b>LCD_RW</b>&nbsp;&nbsp;&nbsp;P0_6</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9e68ed137ca4a61c3977dcdad091f27c"></a><!-- doxytag: member="display.c::LCD_ENABLE" ref="a9e68ed137ca4a61c3977dcdad091f27c" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><b>LCD_ENABLE</b>&nbsp;&nbsp;&nbsp;P1_3</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a25e9d818788f36ed74d7c4579f87f2a6"></a><!-- doxytag: member="display.c::LCD_DATA" ref="a25e9d818788f36ed74d7c4579f87f2a6" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><b>LCD_DATA</b>&nbsp;&nbsp;&nbsp;P2</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac8dd1658e235f174d1cabae5c438943d"></a><!-- doxytag: member="display.c::LCD_BUSY" ref="ac8dd1658e235f174d1cabae5c438943d" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><b>LCD_BUSY</b>&nbsp;&nbsp;&nbsp;P2_7</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a61594bc8f462ed4c7de85aa7bb8d0ec3"></a><!-- doxytag: member="display.c::LCD_COMMAND_WR" ref="a61594bc8f462ed4c7de85aa7bb8d0ec3" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><b>LCD_COMMAND_WR</b>&nbsp;&nbsp;&nbsp;0xFE00</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a332c46e3965046b5c5fac6b6f5bd44a8"></a><!-- doxytag: member="display.c::LCD_STATUS_RD" ref="a332c46e3965046b5c5fac6b6f5bd44a8" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><b>LCD_STATUS_RD</b>&nbsp;&nbsp;&nbsp;0xFE01</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91335beb8bac53514640804fde8c49cf"></a><!-- doxytag: member="display.c::LCD_DATA_WR" ref="a91335beb8bac53514640804fde8c49cf" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><b>LCD_DATA_WR</b>&nbsp;&nbsp;&nbsp;0xFE02</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9d40378769f26f354ca485591df46dda"></a><!-- doxytag: member="display.c::LCD_DATA_RD" ref="a9d40378769f26f354ca485591df46dda" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><b>LCD_DATA_RD</b>&nbsp;&nbsp;&nbsp;0xFE03</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad8f205e8b559d700cd701f3dab0f94e9"></a><!-- doxytag: member="display.c::LCD_CLEAR_CMD" ref="ad8f205e8b559d700cd701f3dab0f94e9" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><b>LCD_CLEAR_CMD</b>&nbsp;&nbsp;&nbsp;0x01</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ec213abc0d2c108124d59ed27832741"></a><!-- doxytag: member="display.c::LCD_HOME_CMD" ref="a8ec213abc0d2c108124d59ed27832741" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><b>LCD_HOME_CMD</b>&nbsp;&nbsp;&nbsp;0x02</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46b660b32db32c368d5f265b03425293"></a><!-- doxytag: member="display.c::LCD_ON_CMD" ref="a46b660b32db32c368d5f265b03425293" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><b>LCD_ON_CMD</b>&nbsp;&nbsp;&nbsp;0x0C</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a570b1174165f36e164b8f56d913acdea"></a><!-- doxytag: member="display.c::LCD_SHIFT_CMD" ref="a570b1174165f36e164b8f56d913acdea" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><b>LCD_SHIFT_CMD</b>&nbsp;&nbsp;&nbsp;0x10</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ff712370a958f92b809b0b84a878c01"></a><!-- doxytag: member="display.c::LCD_CONFIG_CMD" ref="a5ff712370a958f92b809b0b84a878c01" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><b>LCD_CONFIG_CMD</b>&nbsp;&nbsp;&nbsp;0x38</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6449478dfde9b21e85df24adc976cb61"></a><!-- doxytag: member="display.c::LCD_HORIZ_SIZE" ref="a6449478dfde9b21e85df24adc976cb61" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><b>LCD_HORIZ_SIZE</b>&nbsp;&nbsp;&nbsp;16</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5a29d12465e596c13f482bd6c53c0ed6"></a><!-- doxytag: member="display.c::LCD_VERT_SIZE" ref="a5a29d12465e596c13f482bd6c53c0ed6" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><b>LCD_VERT_SIZE</b>&nbsp;&nbsp;&nbsp;2</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4eab1c4b56ce4e356f5027d297ff5796"></a><!-- doxytag: member="display.c::LCD_BYTES_PER_LINE" ref="a4eab1c4b56ce4e356f5027d297ff5796" args="" -->
+#define&nbsp;</td><td class="memItemRight" valign="bottom"><b>LCD_BYTES_PER_LINE</b>&nbsp;&nbsp;&nbsp;(128 / LCD_VERT_SIZE)</td></tr>
+<tr><td colspan="2"><h2>Funciones</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8c.html#a5fa54c2dbf5b2cb18b145fe867d782f2">lcd_busy</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns when the lcd has completed the task.  <a href="#a5fa54c2dbf5b2cb18b145fe867d782f2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8c.html#a7570f3657d5468148afe4f2e356bc41a">lcd_command</a> (unsigned char cmd)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sends a command to the lcd.  <a href="#a7570f3657d5468148afe4f2e356bc41a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8c.html#ae2a729b8b952ad11f8520479931673c8">lcd_putchar</a> (char c)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Print a character.  <a href="#ae2a729b8b952ad11f8520479931673c8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8c.html#ae6d85b9d85a99760ac6a199444754a23">lcd_putstring</a> (char *mensaje)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Print a string.  <a href="#ae6d85b9d85a99760ac6a199444754a23"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8c.html#a6842775ba83d166f02b8fef8bb63b1e6">lcd_init</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initialize diplay.  <a href="#a6842775ba83d166f02b8fef8bb63b1e6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8c.html#a59fe0123d1b4a54205e69fc673f5f14a">lcd_set_xy_raw</a> (unsigned int x, unsigned int y)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Move cursor.  <a href="#a59fe0123d1b4a54205e69fc673f5f14a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8c.html#ad235a86241458b1e7b8771688bfdaf9a">lcd_clear</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Clear display.  <a href="#ad235a86241458b1e7b8771688bfdaf9a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8c.html#a3aabf730aa4e0393bb5c959583c00a8e">lcd_home</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Send home.  <a href="#a3aabf730aa4e0393bb5c959583c00a8e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="display_8c.html#ae37f1da1bcd6bf29202b39ff19723a34">display_int</a> (unsigned int dato)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Print an integer.  <a href="#ae37f1da1bcd6bf29202b39ff19723a34"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripción detallada</h2>
+<p>Routines for controlling a hd44780-compatible lcd display. </p>
+<p>This file holds the required functions to initialize, read and write an lcd. It must be connected using a 8 bit wide data bus, and connecting all the control lines, including R/W. Every high level function will return once the lcd has completed the task. </p>
+
+<p>Definición en el archivo <a class="el" href="display_8c_source.html">display.c</a>.</p>
+<hr/><h2>Documentación de las funciones</h2>
+<a class="anchor" id="ae37f1da1bcd6bf29202b39ff19723a34"></a><!-- doxytag: member="display.c::display_int" ref="ae37f1da1bcd6bf29202b39ff19723a34" args="(unsigned int dato)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void display_int </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&nbsp;</td>
+          <td class="paramname"> <em>dato</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Print an integer. </p>
+<p>Not used </p>
+
+<p>Definición en la línea <a class="el" href="display_8c_source.html#l00147">147</a> del archivo <a class="el" href="display_8c_source.html">display.c</a>.</p>
+
+<p><div class="fragment"><pre class="fragment"><a name="l00148"></a>00148 {
+<a name="l00149"></a>00149     <span class="keywordtype">char</span> out[5];
+<a name="l00150"></a>00150     <span class="keywordtype">char</span> i;
+<a name="l00151"></a>00151 
+<a name="l00152"></a>00152     <span class="keywordflow">for</span>(i=0 ; i&lt;5 ; ++i)
+<a name="l00153"></a>00153     {
+<a name="l00154"></a>00154         <span class="keywordflow">if</span>(i==1)
+<a name="l00155"></a>00155             out[4-i] = <span class="charliteral">&apos;.&apos;</span>;<span class="comment">//0b00101110;        //caracter &apos;.&apos;</span>
+<a name="l00156"></a>00156         <span class="keywordflow">else</span>
+<a name="l00157"></a>00157         {
+<a name="l00158"></a>00158             out[4-i] = dato % 10;
+<a name="l00159"></a>00159             dato /= 10;
+<a name="l00160"></a>00160         }
+<a name="l00161"></a>00161     } 
+<a name="l00162"></a>00162     <span class="keywordflow">if</span>(out[0])
+<a name="l00163"></a>00163         <a class="code" href="display_8c.html#ae2a729b8b952ad11f8520479931673c8" title="Print a character.">lcd_putchar</a>(out[0]+48);
+<a name="l00164"></a>00164     <span class="keywordflow">if</span>(out[1] || out[0])
+<a name="l00165"></a>00165         <a class="code" href="display_8c.html#ae2a729b8b952ad11f8520479931673c8" title="Print a character.">lcd_putchar</a>(out[1]+48);
+<a name="l00166"></a>00166     <a class="code" href="display_8c.html#ae2a729b8b952ad11f8520479931673c8" title="Print a character.">lcd_putchar</a>(out[2]+48);
+<a name="l00167"></a>00167     <a class="code" href="display_8c.html#ae2a729b8b952ad11f8520479931673c8" title="Print a character.">lcd_putchar</a>(out[3]);
+<a name="l00168"></a>00168     <a class="code" href="display_8c.html#ae2a729b8b952ad11f8520479931673c8" title="Print a character.">lcd_putchar</a>(out[4]+48);
+<a name="l00169"></a>00169 }</pre></div></p>
+
+</div>
+</div>
+<a class="anchor" id="a5fa54c2dbf5b2cb18b145fe867d782f2"></a><!-- doxytag: member="display.c::lcd_busy" ref="a5fa54c2dbf5b2cb18b145fe867d782f2" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lcd_busy </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns when the lcd has completed the task. </p>
+<p>Contains a polling mechanism to ensure the display can receive commands. Beware that this function locks the cpu. </p>
+
+<p>Definición en la línea <a class="el" href="display_8c_source.html#l00036">36</a> del archivo <a class="el" href="display_8c_source.html">display.c</a>.</p>
+
+<p><div class="fragment"><pre class="fragment"><a name="l00037"></a>00037 {
+<a name="l00038"></a>00038     <span class="keywordtype">int</span> loop=0;
+<a name="l00039"></a>00039     LCD_DATA = 0x00;
+<a name="l00040"></a>00040     LCD_RW = 1;     
+<a name="l00041"></a>00041     LCD_RS = 0; 
+<a name="l00042"></a>00042     LCD_ENABLE = 1;
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044     <span class="keywordflow">while</span>(loop &lt; 200)
+<a name="l00045"></a>00045         loop++;     <span class="comment">//a little spinlock</span>
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047     <span class="keywordflow">while</span>(LCD_BUSY) ;   
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049     LCD_ENABLE = 0; 
+<a name="l00050"></a>00050 }
+</pre></div></p>
+
+</div>
+</div>
+<a class="anchor" id="ad235a86241458b1e7b8771688bfdaf9a"></a><!-- doxytag: member="display.c::lcd_clear" ref="ad235a86241458b1e7b8771688bfdaf9a" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lcd_clear </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Clear display. </p>
+<p>Clear the display using the corresponding command. </p>
+
+<p>Definición en la línea <a class="el" href="display_8c_source.html#l00129">129</a> del archivo <a class="el" href="display_8c_source.html">display.c</a>.</p>
+
+<p><div class="fragment"><pre class="fragment"><a name="l00130"></a>00130 {
+<a name="l00131"></a>00131     <a class="code" href="display_8c.html#a7570f3657d5468148afe4f2e356bc41a" title="Sends a command to the lcd.">lcd_command</a>(LCD_CLEAR_CMD);
+<a name="l00132"></a>00132 }
+</pre></div></p>
+
+</div>
+</div>
+<a class="anchor" id="a7570f3657d5468148afe4f2e356bc41a"></a><!-- doxytag: member="display.c::lcd_command" ref="a7570f3657d5468148afe4f2e356bc41a" args="(unsigned char cmd)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lcd_command </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&nbsp;</td>
+          <td class="paramname"> <em>cmd</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Sends a command to the lcd. </p>
+<p>Send a command to the lcd </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>cmd</em>&nbsp;</td><td>Command to send </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="display_8c_source.html#l00057">57</a> del archivo <a class="el" href="display_8c_source.html">display.c</a>.</p>
+
+<p><div class="fragment"><pre class="fragment"><a name="l00058"></a>00058 {
+<a name="l00059"></a>00059     <a class="code" href="display_8c.html#a5fa54c2dbf5b2cb18b145fe867d782f2" title="Returns when the lcd has completed the task.">lcd_busy</a>();
+<a name="l00060"></a>00060     LCD_RW = 0;     
+<a name="l00061"></a>00061     LCD_RS = 0;     
+<a name="l00062"></a>00062     LCD_ENABLE = 1;
+<a name="l00063"></a>00063     LCD_DATA = cmd;
+<a name="l00064"></a>00064     LCD_ENABLE = 0;
+<a name="l00065"></a>00065 }
+</pre></div></p>
+
+</div>
+</div>
+<a class="anchor" id="a3aabf730aa4e0393bb5c959583c00a8e"></a><!-- doxytag: member="display.c::lcd_home" ref="a3aabf730aa4e0393bb5c959583c00a8e" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lcd_home </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Send home. </p>
+<p>Set cursor position to (0,0) using the corresponding command. </p>
+
+<p>Definición en la línea <a class="el" href="display_8c_source.html#l00138">138</a> del archivo <a class="el" href="display_8c_source.html">display.c</a>.</p>
+
+<p><div class="fragment"><pre class="fragment"><a name="l00139"></a>00139 {
+<a name="l00140"></a>00140     <a class="code" href="display_8c.html#a7570f3657d5468148afe4f2e356bc41a" title="Sends a command to the lcd.">lcd_command</a>(LCD_HOME_CMD);
+<a name="l00141"></a>00141 }
+</pre></div></p>
+
+</div>
+</div>
+<a class="anchor" id="a6842775ba83d166f02b8fef8bb63b1e6"></a><!-- doxytag: member="display.c::lcd_init" ref="a6842775ba83d166f02b8fef8bb63b1e6" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lcd_init </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Initialize diplay. </p>
+<p>Sends three commands, with the purpose of configure and setup the display. </p>
+
+<p>Definición en la línea <a class="el" href="display_8c_source.html#l00103">103</a> del archivo <a class="el" href="display_8c_source.html">display.c</a>.</p>
+
+<p><div class="fragment"><pre class="fragment"><a name="l00104"></a>00104 {
+<a name="l00105"></a>00105     <a class="code" href="display_8c.html#a7570f3657d5468148afe4f2e356bc41a" title="Sends a command to the lcd.">lcd_command</a>(LCD_CONFIG_CMD);
+<a name="l00106"></a>00106     <a class="code" href="display_8c.html#a7570f3657d5468148afe4f2e356bc41a" title="Sends a command to the lcd.">lcd_command</a>(LCD_ON_CMD);
+<a name="l00107"></a>00107     <a class="code" href="display_8c.html#a7570f3657d5468148afe4f2e356bc41a" title="Sends a command to the lcd.">lcd_command</a>(LCD_SHIFT_CMD);
+<a name="l00108"></a>00108 }
+</pre></div></p>
+
+</div>
+</div>
+<a class="anchor" id="ae2a729b8b952ad11f8520479931673c8"></a><!-- doxytag: member="display.c::lcd_putchar" ref="ae2a729b8b952ad11f8520479931673c8" args="(char c)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lcd_putchar </td>
+          <td>(</td>
+          <td class="paramtype">char&nbsp;</td>
+          <td class="paramname"> <em>c</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Print a character. </p>
+<p>Print a character </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>c</em>&nbsp;</td><td>char to be written </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="display_8c_source.html#l00072">72</a> del archivo <a class="el" href="display_8c_source.html">display.c</a>.</p>
+
+<p><div class="fragment"><pre class="fragment"><a name="l00073"></a>00073 {
+<a name="l00074"></a>00074     <a class="code" href="display_8c.html#a5fa54c2dbf5b2cb18b145fe867d782f2" title="Returns when the lcd has completed the task.">lcd_busy</a>();
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076     LCD_RW = 0;     
+<a name="l00077"></a>00077     LCD_RS = 1; 
+<a name="l00078"></a>00078     LCD_ENABLE = 1;
+<a name="l00079"></a>00079     LCD_DATA = c;
+<a name="l00080"></a>00080     LCD_ENABLE = 0;
+<a name="l00081"></a>00081 }
+</pre></div></p>
+
+</div>
+</div>
+<a class="anchor" id="ae6d85b9d85a99760ac6a199444754a23"></a><!-- doxytag: member="display.c::lcd_putstring" ref="ae6d85b9d85a99760ac6a199444754a23" args="(char *mensaje)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lcd_putstring </td>
+          <td>(</td>
+          <td class="paramtype">char *&nbsp;</td>
+          <td class="paramname"> <em>mensaje</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Print a string. </p>
+<p>Print a string, this function is made for convenience, reusing <a class="el" href="display_8c.html#ae2a729b8b952ad11f8520479931673c8" title="Print a character.">lcd_putchar()</a>. </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>mensaje</em>&nbsp;</td><td>string to be written </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="display_8c_source.html#l00089">89</a> del archivo <a class="el" href="display_8c_source.html">display.c</a>.</p>
+
+<p><div class="fragment"><pre class="fragment"><a name="l00090"></a>00090 {  
+<a name="l00091"></a>00091  <span class="keywordflow">while</span>(*mensaje)
+<a name="l00092"></a>00092   {
+<a name="l00093"></a>00093     <a class="code" href="display_8c.html#ae2a729b8b952ad11f8520479931673c8" title="Print a character.">lcd_putchar</a>(*mensaje) ;
+<a name="l00094"></a>00094     mensaje++ ;
+<a name="l00095"></a>00095   }
+<a name="l00096"></a>00096 }
+</pre></div></p>
+
+</div>
+</div>
+<a class="anchor" id="a59fe0123d1b4a54205e69fc673f5f14a"></a><!-- doxytag: member="display.c::lcd_set_xy_raw" ref="a59fe0123d1b4a54205e69fc673f5f14a" args="(unsigned int x, unsigned int y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lcd_set_xy_raw </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&nbsp;</td>
+          <td class="paramname"> <em>y</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Move cursor. </p>
+<p>Set the cursor to (x,y), using the corresponding command </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Postion, starts from 0 </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Postion, starts from 0 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definición en la línea <a class="el" href="display_8c_source.html#l00116">116</a> del archivo <a class="el" href="display_8c_source.html">display.c</a>.</p>
+
+<p><div class="fragment"><pre class="fragment"><a name="l00117"></a>00117 {
+<a name="l00118"></a>00118     <span class="keywordflow">if</span>(y==0)
+<a name="l00119"></a>00119     <a class="code" href="display_8c.html#a7570f3657d5468148afe4f2e356bc41a" title="Sends a command to the lcd.">lcd_command</a>(0x80+x);
+<a name="l00120"></a>00120     <span class="keywordflow">else</span>
+<a name="l00121"></a>00121     <a class="code" href="display_8c.html#a7570f3657d5468148afe4f2e356bc41a" title="Sends a command to the lcd.">lcd_command</a>(0xC0+x);
+<a name="l00122"></a>00122 }
+</pre></div></p>
+
+</div>
+</div>
+</div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Estructuras de Datos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variables</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr size="1"/><address style="text-align: right;"><small>Generado el Tue Dec 1 10:47:58 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

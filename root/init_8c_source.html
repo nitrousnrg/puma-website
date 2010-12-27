@@ -1,0 +1,135 @@
+<!-- This comment will put IE 6, 7 and 8 in quirks mode -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Fichero Fuente init.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Generado por Doxygen 1.6.1 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="annotated.html"><span>Estructuras&nbsp;de&nbsp;Datos</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <img id="MSearchSelect" src="search/search.png"
+             onmouseover="return searchBox.OnSearchSelectShow()"
+             onmouseout="return searchBox.OnSearchSelectHide()"
+             alt=""/>
+        <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+             onfocus="searchBox.OnSearchFieldFocus(true)" 
+             onblur="searchBox.OnSearchFieldFocus(false)" 
+             onkeyup="searchBox.OnSearchFieldChange(event)"/>
+        <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+<h1>init.c</h1><a href="init_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include&quot;<a class="code" href="declaraciones_8h.html" title="Definiciones, declaraciones y variables globales.">declaraciones.h</a>&quot;</span>
+<a name="l00002"></a>00002 
+<a name="l00015"></a><a class="code" href="init_8c.html#a348d23d5899ce59d18975284dfb0afc0">00015</a> <span class="keywordtype">void</span> <a class="code" href="init_8c.html#a348d23d5899ce59d18975284dfb0afc0" title="Inicializa las variables del sistema (pid, pines, configuracion).">init_system</a> (<span class="keywordtype">void</span>)
+<a name="l00016"></a>00016 {
+<a name="l00017"></a>00017         <span class="comment">//el lazo es mayormente PI</span>
+<a name="l00018"></a>00018     pid-&gt;<a class="code" href="structSPid.html#a5a37129e747b1c8135ceadc043df704f" title="integral gain">iGain</a> = 0.0008;        <span class="comment">//segunda a calibrar. Arrancar a subir desde 0.0001 0 0.01</span>
+<a name="l00019"></a>00019     pid-&gt;<a class="code" href="structSPid.html#a440e5b60f4b2d4d63ed790785206c58c" title="proportional gain">pGain</a> = 20;    <span class="comment">//primera a calibrar. entre 1 y 100 mas o menos</span>
+<a name="l00020"></a>00020     pid-&gt;<a class="code" href="structSPid.html#aaa65522cc2bcd311ac987b6cc44bbbff" title="derivative gain">dGain</a> = 0;
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022     PID_SAMPLE = 0;
+<a name="l00023"></a>00023     
+<a name="l00024"></a>00024     AD_CS = 1;          <span class="comment">//desactivo conversor</span>
+<a name="l00025"></a>00025     LED_1 = 1;          <span class="comment">//apago leds</span>
+<a name="l00026"></a>00026     LED_2 = 1;
+<a name="l00027"></a>00027     ON_OFF_317 = 0;     <span class="comment">//enciendo la fuente</span>
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029     <span class="comment">// Levanto configuracion de la eeprom</span>
+<a name="l00030"></a>00030     <a class="code" href="declaraciones_8h.html#ad01aef708ae4ea5cde86c73f03f92a01" title="temperatura a la que se activan las alarmas">max_temp</a> = <a class="code" href="eeprom_8c.html#aa5c438e02bbbdf939bfe4c1a3c244cf9" title="Lee un byte de la eeprom.">readEEPROM</a>(0x0700);
+<a name="l00031"></a>00031     corrienteDeCorte = <a class="code" href="eeprom_8c.html#aa5c438e02bbbdf939bfe4c1a3c244cf9" title="Lee un byte de la eeprom.">readEEPROM</a>(0x0720);
+<a name="l00032"></a>00032 }
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034 <span class="comment">/* funciones de inicializacion de periféricos */</span>
+<a name="l00035"></a>00035 
+<a name="l00041"></a><a class="code" href="init_8c.html#a99ccbea44caa7d91c17782c602f956ef">00041</a> <span class="keywordtype">void</span> <a class="code" href="init_8c.html#a99ccbea44caa7d91c17782c602f956ef" title="Configuración del timer 0.">timer0_init</a>(<span class="keywordtype">void</span>) <span class="comment">/* Timer 0 - 8 bits autorecargable */</span>
+<a name="l00042"></a>00042 {
+<a name="l00043"></a>00043     TMOD &amp;= 0xF0;   <span class="comment">/* Timer 0 mode 0 with hardware gate */</span>
+<a name="l00044"></a>00044     TMOD |= 0x0A;   <span class="comment">/* GATE0=1; C/T0#=0; M10=1; M00=0; */</span>
+<a name="l00045"></a>00045     TL0 = 0xEE;     <span class="comment">/* init values */</span>
+<a name="l00046"></a>00046     TH0 = 0xEE;     <span class="comment">/* reload value */</span>
+<a name="l00047"></a>00047     ET0=1;          <span class="comment">/* enable timer0 interrupt */</span>
+<a name="l00048"></a>00048     EA=1;           <span class="comment">/* enable interrupts */</span>
+<a name="l00049"></a>00049     TR0=1;          <span class="comment">/* timer0 run */</span>
+<a name="l00050"></a>00050 }
+<a name="l00051"></a>00051 
+<a name="l00058"></a><a class="code" href="init_8c.html#a4bf94e7ecb9e79da24374ce9f0a9838f">00058</a> <span class="keywordtype">void</span> <a class="code" href="init_8c.html#a4bf94e7ecb9e79da24374ce9f0a9838f" title="Configuración del PWM.">PWM_init</a>(<span class="keywordtype">int</span> <a class="code" href="declaraciones_8h.html#a578f9dc8939782bddd84308965b6374f" title="Duty cycle del PWM.">ciclo_util</a>)
+<a name="l00059"></a>00059 {
+<a name="l00060"></a>00060     CMOD = 0X05;
+<a name="l00061"></a>00061     CCAPM1 = 0X42;
+<a name="l00062"></a>00062     CCAP1H = ciclo_util;        <span class="comment">//inicialmente apagado</span>
+<a name="l00063"></a>00063     CCON |= 0X40;
+<a name="l00064"></a>00064 }
+<a name="l00071"></a><a class="code" href="init_8c.html#a0eb48b6146b62e0e20d87fe066fe9f30">00071</a> <span class="keywordtype">void</span> <a class="code" href="init_8c.html#a0eb48b6146b62e0e20d87fe066fe9f30" title="Configuración del timer 2.">timer2_init</a>(<span class="keywordtype">void</span>) <span class="comment">/* Timer 2 - 16 bits autorecargable */</span>
+<a name="l00072"></a>00072 {
+<a name="l00073"></a>00073     T2MOD &amp;= 0xFC;  <span class="comment">/* T2OE=0;DCEN=1; */</span>
+<a name="l00074"></a>00074     T2MOD |= 0x01;
+<a name="l00075"></a>00075     EXF2=0;         <span class="comment">/* reset flag */</span>
+<a name="l00076"></a>00076     TCLK=0;RCLK=0;  <span class="comment">/* disable baud rate generator */</span>
+<a name="l00077"></a>00077     EXEN2=0;        <span class="comment">/* ignore events on T2EX */</span>
+<a name="l00078"></a>00078     TH2=0xBE;       <span class="comment">/* Init msb_value */</span>
+<a name="l00079"></a>00079     TL2=0xE5;       <span class="comment">/* Init lsb_value */</span>
+<a name="l00080"></a>00080     RCAP2H=0xBE;    <span class="comment">/* reload msb_value */</span>
+<a name="l00081"></a>00081     RCAP2L=0xE5;    <span class="comment">/* reload lsb_value */</span>
+<a name="l00082"></a>00082     C_T2=0;         <span class="comment">/* timer mode */</span>
+<a name="l00083"></a>00083     CP_RL2=0;       <span class="comment">/* reload mode */</span>
+<a name="l00084"></a>00084     EA=1;           <span class="comment">/* interupt enable */</span>
+<a name="l00085"></a>00085     ET2=1;          <span class="comment">/* enable timer2 interrupt */</span>
+<a name="l00086"></a>00086     TR2=1;          <span class="comment">/* timer2 run */</span>
+<a name="l00087"></a>00087 }
+<a name="l00088"></a>00088 
+<a name="l00098"></a><a class="code" href="init_8c.html#ae909944aa85ae98323073c628be541aa">00098</a> <span class="keywordtype">void</span> <a class="code" href="init_8c.html#ae909944aa85ae98323073c628be541aa" title="Configuración del módulo SPI.">spi_init</a>(<span class="keywordtype">void</span>)
+<a name="l00099"></a>00099 {
+<a name="l00100"></a>00100     <a class="code" href="declaraciones_8h.html#aec6f5d8448ac2c1f0b9adfc0f43e59ab" title="define qué byte de la comunicación con el A/D se está llevando a cabo.">stage</a> = 0;
+<a name="l00101"></a>00101     <a class="code" href="declaraciones_8h.html#aa307bfbca80b5f6516e12f3b4c392693" title="canal que esta siendo muestreado">ad_channel</a> = 0;
+<a name="l00102"></a>00102     SPCON |= MSTR;      <span class="comment">/* Master mode */</span>
+<a name="l00103"></a>00103     SPCON |= 0x82;      <span class="comment">/* Fclk Periph/128 */</span>
+<a name="l00104"></a>00104     SPCON |= SSDIS;     <span class="comment">/* SS is a general-purpose pin, there is only one master*/</span>
+<a name="l00105"></a>00105     SPCON &amp;= ~CPOL;     <span class="comment">/* CPOL=0; SCK is low when idle (active high) */</span>
+<a name="l00106"></a>00106     SPCON &amp;= ~CPHA;     <span class="comment">/* CPHA=1; transmit mode example */</span>
+<a name="l00107"></a>00107     IEN1 |= ESPI;       <span class="comment">/* enable spi interrupt */</span>
+<a name="l00108"></a>00108     EA=1;           <span class="comment">/* enable interrupts */</span>
+<a name="l00109"></a>00109     SPCON |= SPEN;      <span class="comment">/* run spi */</span>
+<a name="l00110"></a>00110 }
+</pre></div></div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Estructuras de Datos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variables</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr size="1"/><address style="text-align: right;"><small>Generado el Tue Dec 1 10:47:58 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

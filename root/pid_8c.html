@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>Proyecto Final</title>
+<title>Referencia del Archivo pid.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javaScript" src="search/search.js"></script>
@@ -17,9 +17,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 <div class="navigation" id="top">
   <div class="tabs">
     <ul>
-      <li class="current"><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
       <li><a href="annotated.html"><span>Estructuras&nbsp;de&nbsp;Datos</span></a></li>
-      <li><a href="files.html"><span>Archivos</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <img id="MSearchSelect" src="search/search.png"
@@ -35,15 +35,53 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
       </li>
     </ul>
   </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
 </div>
 <div class="contents">
-<h1>Proyecto Final</h1><dl class="author"><dt><b>Autores:</b></dt><dd>Bonzani Andrés <br/>
- Chaparro Marcos</dd></dl>
-<h2><a class="anchor" id="intro_sec">
-Introducción</a></h2>
-<p>Esta es la documentación correspondiente al firmware de control de una fuente de alimentación regulable controlada a través de un microcontrolador. El sistema cuenta con microcontrolador modelo at89c51ed2, encargado de leer pedidos del usuario, mostrar todas las variables y configuraciones de la fuente en un display LCD, y generar alarmas ante cortocircuitos y excesos de temperatura.</p>
-<p>El proyecto hace uso de un conversor A/D de 12bits y 8 canales, LCD, motor PaP, comunicaciones RS232 para el bootloader, un motor de corriente continua para el ventilador, y la memoria eeprom para almacenar configuraciones.</p>
-<p>Las rutinas utilizadas se encargan de manejar todos estos dispositivos, y de administrar los recursos para llevar a cabo el control. También se incluyen rutinas de manejo de strings, de matemática, y la presentación de datos en el menu. Entre todo, se utilizó un 12% de la memoria Flash disponible, y la ram interna fue suficiente para las variables y el stack. </p>
+<h1>Referencia del Archivo pid.c</h1>
+<p>Proportional Integrative Derivative loop.  
+<a href="#_details">Más...</a></p>
+<code>#include &quot;<a class="el" href="declaraciones_8h_source.html">declaraciones.h</a>&quot;</code><br/>
+<div class="dynheader">
+Dependencia gráfica adjunta para pid.c:</div>
+<div class="dynsection">
+<div class="center"><img src="pid_8c__incl.png" border="0" usemap="#pid_8c_map" alt=""/></div>
+<map name="pid_8c_map" id="pid_8c">
+<area shape="rect" href="declaraciones_8h.html" title="Definiciones, declaraciones y variables globales." alt="" coords="5,83,117,112"/></map>
+</div>
+<div class="dynheader">
+Gráfico de los archivos que directa o indirectamente incluyen a este archivo:</div>
+<div class="dynsection">
+<div class="center"><img src="pid_8c__dep__incl.png" border="0" usemap="#pid_8cdep_map" alt=""/></div>
+<map name="pid_8cdep_map" id="pid_8cdep">
+<area shape="rect" href="main_8c.html" title="Aquí está el centro del sistema." alt="" coords="5,83,64,112"/></map>
+</div>
+
+<p><a href="pid_8c_source.html">Ir al código fuente de este archivo.</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><h2>Funciones</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a32884c4314555813866a2eaf6931e15a"></a><!-- doxytag: member="pid.c::updatePID" ref="a32884c4314555813866a2eaf6931e15a" args="(SPid *pid, float error, float position)" -->
+float&nbsp;</td><td class="memItemRight" valign="bottom"><b>updatePID</b> (<a class="el" href="structSPid.html">SPid</a> *pid, float error, float position)</td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Descripción detallada</h2>
+<p>Proportional Integrative Derivative loop. </p>
+<p>Esta funcion es la encargada de calcular los aportes del pid, y retorna el valor correspondiente a la corrección. </p>
+<dl><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>pid</em>&nbsp;</td><td>Puntero a la estructura que contiene el estado del pid </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>error</em>&nbsp;</td><td>Diferencia entre el estado actual y el estado deseado </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>position</em>&nbsp;</td><td>Estado actual del sistema </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Devuelve:</b></dt><dd>valor calculado para estabilizar el sistema. </dd></dl>
+
+<p>Definición en el archivo <a class="el" href="pid_8c_source.html">pid.c</a>.</p>
 </div>
 <!--- window showing the filter options -->
 <div id="MSearchSelectWindow"

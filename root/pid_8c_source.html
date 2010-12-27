@@ -1,0 +1,84 @@
+<!-- This comment will put IE 6, 7 and 8 in quirks mode -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Fichero Fuente pid.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Generado por Doxygen 1.6.1 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="annotated.html"><span>Estructuras&nbsp;de&nbsp;Datos</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <img id="MSearchSelect" src="search/search.png"
+             onmouseover="return searchBox.OnSearchSelectShow()"
+             onmouseout="return searchBox.OnSearchSelectHide()"
+             alt=""/>
+        <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+             onfocus="searchBox.OnSearchFieldFocus(true)" 
+             onblur="searchBox.OnSearchFieldFocus(false)" 
+             onkeyup="searchBox.OnSearchFieldChange(event)"/>
+        <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+<h1>pid.c</h1><a href="pid_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &quot;<a class="code" href="declaraciones_8h.html" title="Definiciones, declaraciones y variables globales.">declaraciones.h</a>&quot;</span>
+<a name="l00002"></a>00002 
+<a name="l00014"></a>00014 <span class="keywordtype">float</span> updatePID(<a class="code" href="structSPid.html" title="Variables y constantes del lazo PID.">SPid</a> *pid, <span class="keywordtype">float</span> error, <span class="keywordtype">float</span> position)
+<a name="l00015"></a>00015 {
+<a name="l00016"></a>00016     <span class="keywordtype">float</span> pTerm, dTerm, iTerm;
+<a name="l00017"></a>00017     
+<a name="l00018"></a>00018     pTerm = pid-&gt;<a class="code" href="structSPid.html#a440e5b60f4b2d4d63ed790785206c58c" title="proportional gain">pGain</a> * error;     <span class="comment">//calculate the proportional term</span>
+<a name="l00019"></a>00019     
+<a name="l00020"></a>00020     <span class="comment">//calculate the integral state with appropriate limiting</span>
+<a name="l00021"></a>00021     pid-&gt;<a class="code" href="structSPid.html#adda89fff2cd8678c7b81ffc15c670d22" title="integrator state">iState</a> += error;
+<a name="l00022"></a>00022     
+<a name="l00023"></a>00023     <span class="keywordflow">if</span>( pid-&gt;<a class="code" href="structSPid.html#adda89fff2cd8678c7b81ffc15c670d22" title="integrator state">iState</a> &gt; pid-&gt;<a class="code" href="structSPid.html#a2db5c42b3cd88c26ca78a1e8fb44e4d6" title="maximum &amp;amp; minimum integrator state">iMax</a> )
+<a name="l00024"></a>00024         pid-&gt;<a class="code" href="structSPid.html#adda89fff2cd8678c7b81ffc15c670d22" title="integrator state">iState</a> = pid-&gt;<a class="code" href="structSPid.html#a2db5c42b3cd88c26ca78a1e8fb44e4d6" title="maximum &amp;amp; minimum integrator state">iMax</a>;
+<a name="l00025"></a>00025     <span class="keywordflow">if</span>( pid-&gt;<a class="code" href="structSPid.html#adda89fff2cd8678c7b81ffc15c670d22" title="integrator state">iState</a> &lt; pid-&gt;iMin )
+<a name="l00026"></a>00026         pid-&gt;<a class="code" href="structSPid.html#adda89fff2cd8678c7b81ffc15c670d22" title="integrator state">iState</a> = pid-&gt;iMin;
+<a name="l00027"></a>00027 
+<a name="l00028"></a>00028     iTerm = pid-&gt;<a class="code" href="structSPid.html#a5a37129e747b1c8135ceadc043df704f" title="integral gain">iGain</a> * pid-&gt;<a class="code" href="structSPid.html#adda89fff2cd8678c7b81ffc15c670d22" title="integrator state">iState</a>;   <span class="comment">//calculate the integral term</span>
+<a name="l00029"></a>00029     dTerm = pid-&gt;<a class="code" href="structSPid.html#aaa65522cc2bcd311ac987b6cc44bbbff" title="derivative gain">dGain</a> * (position - pid-&gt;<a class="code" href="structSPid.html#aeea37a2f240e3626a1ada677ff441a6d" title="last position input">dState</a>);
+<a name="l00030"></a>00030     pid-&gt;<a class="code" href="structSPid.html#aeea37a2f240e3626a1ada677ff441a6d" title="last position input">dState</a> = position;
+<a name="l00031"></a>00031     <span class="keywordflow">return</span> pTerm + iTerm -dTerm;
+<a name="l00032"></a>00032 }
+</pre></div></div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Estructuras de Datos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variables</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr size="1"/><address style="text-align: right;"><small>Generado el Tue Dec 1 10:47:58 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>

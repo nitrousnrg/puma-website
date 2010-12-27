@@ -1,0 +1,132 @@
+<!-- This comment will put IE 6, 7 and 8 in quirks mode -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>Fichero Fuente declaraciones.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javaScript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body onload='searchBox.OnSelectItem(0);'>
+<!-- Generado por Doxygen 1.6.1 -->
+<script type="text/javascript"><!--
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+--></script>
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+      <li><a href="annotated.html"><span>Estructuras&nbsp;de&nbsp;Datos</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <img id="MSearchSelect" src="search/search.png"
+             onmouseover="return searchBox.OnSearchSelectShow()"
+             onmouseout="return searchBox.OnSearchSelectHide()"
+             alt=""/>
+        <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+             onfocus="searchBox.OnSearchFieldFocus(true)" 
+             onblur="searchBox.OnSearchFieldFocus(false)" 
+             onkeyup="searchBox.OnSearchFieldChange(event)"/>
+        <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+      <li><a href="globals.html"><span>Globales</span></a></li>
+    </ul>
+  </div>
+<h1>declaraciones.h</h1><a href="declaraciones_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef DECLARACIONES_H_</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define DECLARACIONES_H_</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00004"></a>00004 <span class="preprocessor">#include&lt;at89c51ed2.h&gt;</span>
+<a name="l00005"></a>00005 
+<a name="l00006"></a>00006 <span class="preprocessor">#define LED_1 P0_4</span>
+<a name="l00007"></a>00007 <span class="preprocessor"></span><span class="preprocessor">#define LED_2 P0_2</span>
+<a name="l00008"></a>00008 <span class="preprocessor"></span><span class="preprocessor">#define PULSADOR_1 P0_3</span>
+<a name="l00009"></a>00009 <span class="preprocessor"></span><span class="preprocessor">#define PULSADOR_2 P0_0</span>
+<a name="l00010"></a>00010 <span class="preprocessor"></span><span class="preprocessor">#define PULSADOR_3 P0_1</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span><span class="preprocessor">#define ON_OFF_317 P0_7</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span>
+<a name="l00013"></a>00013 
+<a name="l00014"></a>00014 <span class="preprocessor">#define MOTOR_CC P1_4</span>
+<a name="l00015"></a>00015 <span class="preprocessor"></span>
+<a name="l00016"></a>00016 <span class="preprocessor">#define BUZZER P3_3</span>
+<a name="l00017"></a>00017 <span class="preprocessor"></span><span class="preprocessor">#define STEP1 P3_4</span>
+<a name="l00018"></a>00018 <span class="preprocessor"></span><span class="preprocessor">#define STEP2 P3_5</span>
+<a name="l00019"></a>00019 <span class="preprocessor"></span><span class="preprocessor">#define STEP3 P3_6</span>
+<a name="l00020"></a>00020 <span class="preprocessor"></span><span class="preprocessor">#define STEP4 P3_7</span>
+<a name="l00021"></a>00021 <span class="preprocessor"></span>
+<a name="l00022"></a>00022 <span class="preprocessor">#define AD_CS P1_1</span>
+<a name="l00023"></a>00023 <span class="preprocessor"></span>
+<a name="l00024"></a>00024 <span class="preprocessor">#define MAXIMA_TEMPERATURA 0xFE10</span>
+<a name="l00025"></a>00025 <span class="preprocessor"></span>
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027 
+<a name="l00046"></a>00046  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> CONTADOR=0;
+<a name="l00047"></a>00047  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> PASOS=0;
+<a name="l00048"></a>00048  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> GIRO=0;
+<a name="l00049"></a>00049  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> ULTIMO_PASO=1;
+<a name="l00050"></a>00050  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> MAS_TIEMPO=0;
+<a name="l00051"></a>00051  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> MODO_PROG=0;
+<a name="l00052"></a>00052  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> SELECT=0;
+<a name="l00053"></a>00053  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> NEW_SELECT=1;
+<a name="l00054"></a>00054  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> NEW_TEMP=1;
+<a name="l00055"></a>00055  <span class="keywordtype">float</span> temperature;
+<a name="l00056"></a>00056  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> corrienteDeCorte;
+<a name="l00057"></a>00057  <span class="keywordtype">char</span> <span class="keywordtype">string</span>[16];
+<a name="l00058"></a>00058 
+<a name="l00060"></a><a class="code" href="declaraciones_8h.html#a578f9dc8939782bddd84308965b6374f">00060</a>  <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="declaraciones_8h.html#a578f9dc8939782bddd84308965b6374f" title="Duty cycle del PWM.">ciclo_util</a>;       
+<a name="l00062"></a><a class="code" href="declaraciones_8h.html#ad01aef708ae4ea5cde86c73f03f92a01">00062</a>  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="declaraciones_8h.html#ad01aef708ae4ea5cde86c73f03f92a01" title="temperatura a la que se activan las alarmas">max_temp</a>;
+<a name="l00064"></a><a class="code" href="declaraciones_8h.html#aee185c8cbf77c53802a0654ccf802671">00064</a>  <span class="keyword">volatile</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="declaraciones_8h.html#aee185c8cbf77c53802a0654ccf802671" title="muestras de las variables analógicas">ad_temp_atomic</a>;
+<a name="l00065"></a>00065  <span class="keyword">volatile</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ad_volt_atomic;
+<a name="l00066"></a>00066  <span class="keyword">volatile</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ad_amp_atomic;
+<a name="l00067"></a>00067  <span class="keyword">volatile</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> otroContador;
+<a name="l00068"></a>00068  <span class="keyword">volatile</span> <span class="keywordtype">char</span> PID_SAMPLE;
+<a name="l00070"></a><a class="code" href="declaraciones_8h.html#aec6f5d8448ac2c1f0b9adfc0f43e59ab">00070</a>  <span class="keyword">volatile</span> <span class="keywordtype">char</span> <a class="code" href="declaraciones_8h.html#aec6f5d8448ac2c1f0b9adfc0f43e59ab" title="define qué byte de la comunicación con el A/D se está llevando a cabo.">stage</a>;
+<a name="l00072"></a><a class="code" href="declaraciones_8h.html#aa307bfbca80b5f6516e12f3b4c392693">00072</a>  <span class="keyword">volatile</span> <span class="keywordtype">char</span> <a class="code" href="declaraciones_8h.html#aa307bfbca80b5f6516e12f3b4c392693" title="canal que esta siendo muestreado">ad_channel</a>;
+<a name="l00073"></a>00073 
+<a name="l00079"></a><a class="code" href="unionbyte2int.html">00079</a> <span class="keyword">union </span><a class="code" href="unionbyte2int.html" title="Union para convertir enteros de 16 bits a partir de 2 bytes.">byte2int</a>
+<a name="l00080"></a>00080 {
+<a name="l00081"></a>00081     <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> byte[2];
+<a name="l00082"></a>00082     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> integer;
+<a name="l00083"></a>00083 }<a class="code" href="declaraciones_8h.html#ad6fa8f44b91ad3e44a09919526a89190" title="Union para convertir enteros de 16 bits a partir de 2 bytes.">ad_data</a>;
+<a name="l00084"></a>00084 
+<a name="l00098"></a><a class="code" href="structSPid.html">00098</a> <span class="keyword">typedef</span> <span class="keyword">struct</span>
+<a name="l00099"></a>00099 {   
+<a name="l00100"></a><a class="code" href="structSPid.html#aeea37a2f240e3626a1ada677ff441a6d">00100</a>     <span class="keywordtype">float</span> dState;
+<a name="l00102"></a><a class="code" href="structSPid.html#adda89fff2cd8678c7b81ffc15c670d22">00102</a>     <span class="keywordtype">float</span> iState;
+<a name="l00104"></a><a class="code" href="structSPid.html#a2db5c42b3cd88c26ca78a1e8fb44e4d6">00104</a>     <span class="keywordtype">float</span> iMax, iMin;
+<a name="l00106"></a><a class="code" href="structSPid.html#a5a37129e747b1c8135ceadc043df704f">00106</a>     <span class="keywordtype">float</span> iGain;
+<a name="l00108"></a><a class="code" href="structSPid.html#aaa65522cc2bcd311ac987b6cc44bbbff">00108</a>     <span class="keywordtype">float</span> dGain;
+<a name="l00110"></a><a class="code" href="structSPid.html#a440e5b60f4b2d4d63ed790785206c58c">00110</a>     <span class="keywordtype">float</span> pGain;
+<a name="l00111"></a>00111 }<a class="code" href="structSPid.html" title="Variables y constantes del lazo PID.">SPid</a>;
+<a name="l00112"></a>00112 
+<a name="l00113"></a>00113 <a class="code" href="structSPid.html" title="Variables y constantes del lazo PID.">SPid</a> *pid;
+<a name="l00114"></a>00114 
+<a name="l00115"></a>00115 <span class="preprocessor">#endif </span><span class="comment">/*DECLARACIONES_H_*/</span>
+</pre></div></div>
+<!--- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&nbsp;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&nbsp;</span>Estructuras de Datos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&nbsp;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&nbsp;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&nbsp;</span>Variables</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<hr size="1"/><address style="text-align: right;"><small>Generado el Tue Dec 1 10:47:58 2009 por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.1 </small></address>
+</body>
+</html>
