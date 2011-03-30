@@ -1,7 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" href="$init_8c.html" title="Rutinas de inicialización." alt="" coords="5,83,53,112"/>
-<area shape="rect" href="$main_8c.html" title="Aquí está el centro del sistema." alt="" coords="125,160,184,189"/>
-<area shape="rect" href="$ISR_8c.html" title="Servicios de interrupciones." alt="" coords="128,83,181,112"/>
-<area shape="rect" href="$menu_8c.html" title="Menú de configuración a mostrar en el lcd." alt="" coords="205,83,269,112"/>
-<area shape="rect" href="$pid_8c.html" title="Proportional Integrative Derivative loop." alt="" coords="293,83,341,112"/>
-</map>

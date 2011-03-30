@@ -1,3 +1,5 @@
 /logs/*
 /backups/*
-
+/root/local/
+*~
+.*
